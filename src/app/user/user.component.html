@@ -1,0 +1,16 @@
+<p>user works!</p>
+
+ 
+
+<form action="" class="col-md-4 mx-auto shadow p-5 rounded" [formGroup]="Userform" (submit)="checkdata()">
+ 
+<input type="text" class="form-control mb-4" name="name"  formControlName="name" id="">
+
+
+ 
+
+<input type="text" class="form-control mb-4" name=""  formControlName="email" id="">
+
+<button type="submit " class="btn btn-danger "  [disabled]="!Userform.valid">გაგზავნა</button>
+<button type="button " class="btn btn-success "   (click)="updateName()">განახლება</button>
+</form>

@@ -1,0 +1,22 @@
+<div class="container">
+  
+  <button (click)="disc('true')">ფასდაკლება </button>
+  <button (click)="disc('false')">არაფასდაკლებული</button>
+
+    <div class="row">
+        <div class="col-md-4" *ngFor="let Product of findedProducts">
+            <div class="card">
+                <img src="{{Product.img}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{Product.name}}</h5>
+                  <p>ID : {{Product.id}} </p>
+                  <p>კატეგორიის ID : {{Product.catid}} </p>
+                  <a [routerLink]="['/Product/Detals/' + Product.id + '/comment']" [queryParams]="{active: Product.active, catid: Product.catid}" >სრულად ნახვა</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    
+     
+
+</div>

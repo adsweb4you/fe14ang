@@ -1,0 +1,22 @@
+<div class="container" *ngIf='ifproduct'> 
+  
+  <div class="card col-md-4 mx-auto" [ngClass]="activeclass">
+        <img src="{{Products[0].img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{Products[0].name}}</h5>
+          <p>ID : {{Products[0].id}} </p>
+          <p>კატეგორიის ID : {{Products[0].catid}} </p>
+           
+        </div>
+      </div>
+</div>
+ 
+
+
+<div class="container" *ngIf='!ifproduct'> 
+    <h1 class="text-center">
+        პროდუქტცია ვერ მოიძებნა
+    </h1>
+  </div>
+
+  <router-outlet></router-outlet>
